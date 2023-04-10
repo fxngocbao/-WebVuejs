@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/dngki_dangnhap.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Đăng Ký</title>
+</head>
+<body id="app">
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <h2 style="text-align: center;">ĐĂNG KÍ</h2>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="../img/fb.png"></a>
+                <a href="#"><img src="../img/tw.png"></a>
+                <a href="#"><img src="../img/gp.png"></a>
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="Tên người dùng" v-model="name" @blur="validate()">
+                <b style="color:red;">{{errors.name}}</b>
+                <input type="email" class="input-field" placeholder="Email" @blur="validate()" v-model="email">
+                <b style="color:red;">{{errors.email}}</b>
+                <input type="password" class="input-field" placeholder="Mật khẩu" @blur="validate()" v-model="pass">
+                <b style="color:red;">{{errors.pass}}</b>
+                <input type="password" class="input-field" placeholder="Nhập lại mật khẩu" @blur="validate()" v-model="checkpass">
+                <b style="color:red;">{{errors.checkpass}}</b><br>
+                <input type="checkbox" class="check-box"><span>Tôi đồng ý với các điều khoản & điều kiện</span>
+                <button class="submit-btn">Đăng ký</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../components/login_register.js"></script>
+</body>
+</html>

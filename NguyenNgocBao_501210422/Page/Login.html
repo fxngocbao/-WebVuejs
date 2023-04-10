@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/dngki_dangnhap.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Đăng Nhập</title>
+</head>
+<body id="app">
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <h3 style="text-align: center;">ĐĂNG NHẬP</h3>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="../img/fb.png"></a>
+                <a href="#"><img src="../img/tw.png"></a>
+                <a href="#"><img src="../img/gp.png"></a>
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="Tên người dùng" v-model="name" @blur="validate()">
+                <b style="color:red;">{{errors.name}}</b>
+                <input type="password" class="input-field" placeholder="Mật khẩu" v-model="pass" @blur="validate()">
+                <b style="color:red;">{{errors.pass}}</b><br>
+                <input type="checkbox" class="check-box">Nhớ mật khẩu
+                <button type="submit" class="submit-btn">Đăng nhập</button>
+                <br>
+                <a href="./Register.html" style="text-decoration: none; text-align: center;">Bạn chưa có tài khoản? Đăng kí ngay</a>
+            </form>
+        </div>
+    </div>
+
+    <script src="../components/login_register.js"></script>
+</body>
+</html>
